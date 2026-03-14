@@ -1,0 +1,64 @@
+{
+  "cities": [
+    {
+      "id": "b4e9",
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-07-25T13:38:07.095Z",
+      "notes": "",
+      "position": {
+        "lat": "40.34333979997076",
+        "lng": "-3.687303823032247"
+      }
+    },
+    {
+      "id": "9f9e",
+      "cityName": "Seixal",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2025-07-25T13:38:13.025Z",
+      "notes": "",
+      "position": {
+        "lat": "38.64688216036838",
+        "lng": "-9.074567965929063"
+      }
+    },
+    {
+      "id": "cb88",
+      "cityName": "Tomar",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2025-07-25T13:38:17.601Z",
+      "notes": "",
+      "position": {
+        "lat": "39.61972471422834",
+        "lng": "-8.300657710946146"
+      }
+    },
+    {
+      "id": "ca4b",
+      "cityName": "Fougerolles",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-25T13:38:25.598Z",
+      "notes": "",
+      "position": {
+        "lat": "46.55920223484275",
+        "lng": "1.8581320880590728"
+      }
+    },
+    {
+      "id": "9a92",
+      "cityName": "Les Valls de Valira",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-07-25T13:40:50.228Z",
+      "notes": "",
+      "position": {
+        "lat": "42.37273277201013",
+        "lng": "1.4557405421725236"
+      }
+    }
+  ]
+}
