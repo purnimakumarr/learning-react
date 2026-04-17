@@ -23,7 +23,7 @@ function City() {
       getCity(id);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [id]
+    [id, getCity],
   );
 
   // eslint-disable-next-line no-unused-vars
