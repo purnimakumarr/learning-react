@@ -52,13 +52,12 @@ const Button = styled.button`
   border: none;
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
 
   ${(props) => sizes[props.size]}
-  ${(props) => variations[props.variation]}
-
-  &:hover {
+  ${(props) => variations[props.variation]} /* &:hover {
     background-color: var(--color-brand-700);
-  }
+  } */
 `;
 
 Button.defaultProps = {
