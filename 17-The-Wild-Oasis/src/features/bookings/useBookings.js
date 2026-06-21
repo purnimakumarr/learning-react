@@ -1,4 +1,3 @@
-import { getCabins } from '../../services/apiCabins';
 import { getBookings } from '../../services/apiBookings';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
