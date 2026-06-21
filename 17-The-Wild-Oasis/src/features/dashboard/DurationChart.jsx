@@ -5,7 +5,6 @@ import {
   Sector,
   Legend,
   Tooltip,
-  LabelList,
 } from 'recharts';
 import styled from 'styled-components';
 import Heading from '../../ui/Heading';
