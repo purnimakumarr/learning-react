@@ -13,14 +13,14 @@ async function SelectCountry({ defaultCountry, name, id, className }) {
       name={name}
       id={id}
       // Here we use a trick to encode BOTH the country name and the flag into the value. Then we split them up again later in the server action
-      defaultValue={`${defaultCountry}%${flag.unicode}`}
+      defaultValue={`${defaultCountry}%${flag.url_svg ?? flag.url_png}`}
       className={className}
     >
       <option value=''>Select country...</option>
       {countries.map((c) => (
         <option
           key={c.names.common}
-          value={`${c.names.common}%${c.flag.unicode}`}
+          value={`${c.names.common}%${c.flag.url_svg ?? c.flag.url_png}`}
         >
           {c.names.common}
         </option>

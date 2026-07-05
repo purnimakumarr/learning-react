@@ -8,9 +8,12 @@ export default async function Navigation() {
     <nav className='z-10 text-xl'>
       <ul className='flex gap-16 items-center'>
         <li>
-          <a href='/cabins' className='hover:text-accent-400 transition-colors'>
+          <Link
+            href='/cabins'
+            className='hover:text-accent-400 transition-colors'
+          >
             Cabins
-          </a>
+          </Link>
         </li>
         <li>
           <a href='/about' className='hover:text-accent-400 transition-colors'>
