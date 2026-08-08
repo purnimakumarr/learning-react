@@ -1,33 +1,27 @@
 # React Learning Journey
 
-A collection of projects I built while learning **React and modern React development**.
-
-This repository started as a place to practice individual React concepts and gradually grew into larger applications. The two projects below are the main milestones of that journey: **The Wild Oasis** and **The Wild Oasis Website**.
+This is my code for the [Ultimate React Course](https://www.udemy.com/course/the-ultimate-react-course/) course by Jonas Schmedtmann on Udemy.
 
 ---
 
 ## Projects at a glance
 
-| Project | What it is | Main technologies |
-| --- | --- | --- |
-| [The Wild Oasis](./17-The-Wild-Oasis) | An internal hotel management dashboard | React, Vite, React Router, React Query, Supabase, React Hook Form, Styled Components, Recharts |
-| [The Wild Oasis Website](./21-The-Wild-Oasis-Website) | A customer-facing cabin booking website | Next.js, React, Supabase, NextAuth, Tailwind CSS |
+| Project                                               | What it is                              | Main technologies                                                                              |
+| ----------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [The Wild Oasis](./17-The-Wild-Oasis)                 | An internal hotel management dashboard  | React, Vite, React Router, React Query, Supabase, React Hook Form, Styled Components, Recharts |
+| [The Wild Oasis Website](./21-The-Wild-Oasis-Website) | A customer-facing cabin booking website | Next.js, React, Supabase, NextAuth, Tailwind CSS                                               |
 
 ---
 
 # 1. The Wild Oasis
 
-**Folder:** [`17-The-Wild-Oasis`](./17-The-Wild-Oasis)
+**Live Demo:** [`wild-oasis-resort.vercel.app`](https://wild-oasis-resort.vercel.app)
 
 The Wild Oasis is an **internal hotel management application**. It is designed for hotel employees to manage cabins, bookings, guests, and day-to-day hotel operations from one dashboard.
 
-This was one of the larger React projects in my learning journey. Instead of only building UI components, I used it to practice how a React application is structured when it has multiple features, shared state, server data, forms, authentication, routing, and reusable components.
-
 ### Project screenshot
 
-<!-- Add your screenshot here later. Recommended path: ./17-The-Wild-Oasis/screenshots/dashboard.png -->
-
-> **Screenshot:** Add a screenshot of the main dashboard here.
+![The Wild Oasis - Dashboard](./img/the-wild-oasis-resort-dashboard.png)
 
 ### What the application can do
 
@@ -78,14 +72,13 @@ Some of the main concepts I practiced were:
 
 ### Project links
 
-- [Open project folder](./17-The-Wild-Oasis)
 - [View source code on GitHub](https://github.com/purnimakumarr/learning-react/tree/main/17-The-Wild-Oasis)
 
 ---
 
 # 2. The Wild Oasis Website
 
-**Folder:** [`21-The-Wild-Oasis-Website`](./21-The-Wild-Oasis-Website)
+**Live Demo:** [`the-wild-oasis-bookings.vercel.app`](https://the-wild-oasis-bookings.vercel.app/)
 
 After building the internal management application, I built a separate **customer-facing website** for The Wild Oasis.
 
@@ -93,9 +86,7 @@ This project was a step forward from a traditional React SPA. I used **Next.js**
 
 ### Project screenshot
 
-<!-- Add your screenshot here later. Recommended path: ./21-The-Wild-Oasis-Website/screenshots/home.png -->
-
-> **Screenshot:** Add a screenshot of the website home page here.
+![The Wild Oasis Bookings - Home Page](./img/the-wild-oasis-bookings-home.png)
 
 ### What the website can do
 
@@ -145,7 +136,6 @@ Some of the main concepts I practiced were:
 
 ### Project links
 
-- [Open project folder](./21-The-Wild-Oasis-Website)
 - [View source code on GitHub](https://github.com/purnimakumarr/learning-react/tree/main/21-The-Wild-Oasis-Website)
 
 ---
@@ -241,70 +231,30 @@ I will add screenshots of the projects here as I continue documenting them.
 
 ### The Wild Oasis – Dashboard
 
-<!-- Add image here: ./17-The-Wild-Oasis/screenshots/dashboard.png -->
+![The Wild Oasis - Dashboard](./img/the-wild-oasis-resort-dashboard.png)
 
 ### The Wild Oasis – Bookings
 
-<!-- Add image here: ./17-The-Wild-Oasis/screenshots/bookings.png -->
+![The Wild Oasis - Dashboard](./img/the-wild-oasis-resort-cabins.png)
 
 ### The Wild Oasis – Cabins
 
-<!-- Add image here: ./17-The-Wild-Oasis/screenshots/cabins.png -->
+![The Wild Oasis - Dashboard](./img/the-wild-oasis-resort-cabins.png)
 
-### The Wild Oasis Website – Home
+### The Wild Oasis Website – Home / About
 
-<!-- Add image here: ./21-The-Wild-Oasis-Website/screenshots/home.png -->
+![The Wild Oasis Bookings - Home](./img/the-wild-oasis-bookings-home.png)
+
+![The Wild Oasis Bookings - About](./img/the-wild-oasis-bookings-about.png)
 
 ### The Wild Oasis Website – Cabin Details
 
-<!-- Add image here: ./21-The-Wild-Oasis-Website/screenshots/cabin-details.png -->
+![The Wild Oasis Bookings - Cabins](./img/the-wild-oasis-bookings-cabins.png)
 
-### The Wild Oasis Website – Booking / Account
+![The Wild Oasis Bookings - Cabin Details](./img/the-wild-oasis-bookings-cabin-details.png)
 
-<!-- Add image here: ./21-The-Wild-Oasis-Website/screenshots/booking.png -->
+### The Wild Oasis Website – Reservations / Account
 
----
+![The Wild Oasis Bookings - Reservations](./img/the-wild-oasis-bookings-user-reservations.png)
 
-# Running the Projects Locally
-
-Each application is a separate project with its own `package.json`.
-
-### The Wild Oasis
-
-```bash
-cd 17-The-Wild-Oasis
-npm install
-npm run dev
-```
-
-### The Wild Oasis Website
-
-```bash
-cd 21-The-Wild-Oasis-Website
-npm install
-npm run dev
-```
-
-The Next.js application runs on the default development port:
-
-```text
-http://localhost:3000
-```
-
-Some features require environment variables and a configured Supabase project. Check the individual project folders for their configuration.
-
----
-
-# Why I Built This Repository
-
-This repository is a record of my React learning process rather than a collection of polished production applications.
-
-I wanted to learn by building progressively larger projects: starting with individual React concepts, then combining those concepts into a real application, and finally using Next.js to explore a more complete full-stack React architecture.
-
-The Wild Oasis projects are the main outcome of that process.
-
----
-
-## Repository
-
-[View the complete repository on GitHub](https://github.com/purnimakumarr/learning-react)
+![The Wild Oasis Bookings - Account](./img/the-wild-oasis-bookings-user-details.png)
