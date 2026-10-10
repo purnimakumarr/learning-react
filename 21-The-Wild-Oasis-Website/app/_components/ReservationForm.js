@@ -26,8 +26,8 @@ function ReservationForm({ cabin, user }) {
   const createBookingWithData = createBooking.bind(null, bookingData);
 
   return (
-    <div className='scale-[1.01]'>
-      <div className='bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center'>
+    <div className='xl:scale-[1.01] min-w-0'>
+      <div className='bg-primary-800 text-primary-300 px-4 py-3 sm:px-8 lg:px-16 sm:py-2 flex flex-col items-start gap-3 sm:flex-row sm:justify-between sm:items-center'>
         <p>Logged in as</p>
 
         <div className='flex gap-4 items-center'>
@@ -47,7 +47,7 @@ function ReservationForm({ cabin, user }) {
           await createBookingWithData(formData);
           resetRange();
         }}
-        className='bg-primary-900 py-10 px-16 text-lg flex gap-5 flex-col'
+        className='bg-primary-900 py-8 px-4 sm:px-8 lg:px-16 text-base sm:text-lg flex gap-5 flex-col'
       >
         <div className='space-y-2'>
           <label htmlFor='numGuests'>How many guests?</label>
@@ -80,7 +80,7 @@ function ReservationForm({ cabin, user }) {
           />
         </div>
 
-        <div className='flex justify-end items-center gap-6'>
+        <div className='flex flex-col sm:flex-row sm:justify-end sm:items-center gap-4 sm:gap-6'>
           {!(startDate && endDate) ? (
             <p className='text-primary-300 text-base'>
               Start by selecting dates

@@ -6,9 +6,24 @@ import {
   isSameDay,
   isWithinInterval,
 } from 'date-fns';
+import { useSyncExternalStore } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import { useReservation } from './ReservationContext';
+
+function useAtLeast(width) {
+  const query = `(min-width: ${width}px)`;
+
+  return useSyncExternalStore(
+    (onChange) => {
+      const media = window.matchMedia(query);
+      media.addEventListener('change', onChange);
+      return () => media.removeEventListener('change', onChange);
+    },
+    () => window.matchMedia(query).matches,
+    () => false,
+  );
+}
 
 function isAlreadyBooked(range, datesArr) {
   return (
@@ -31,30 +46,33 @@ function DateSelector({ settings, cabin, bookedDates }) {
 
   // SETTINGS
   const { minBookingLength, maxBookingLength } = settings;
+  const twoMonths = useAtLeast(768);
 
   return (
-    <div className='flex flex-col justify-between'>
-      <DayPicker
-        className='pt-12 place-self-center'
-        mode='range'
-        onSelect={(range) => setRange(range)}
-        selected={displayRange}
-        min={minBookingLength + 1}
-        max={maxBookingLength}
-        startMonth={new Date()}
-        startDate={new Date()}
-        endMonth={new Date(new Date().getFullYear() + 5, 11)}
-        captionLayout='dropdown'
-        numberOfMonths={2}
-        navLayout='after'
-        disabled={(curDate) =>
-          isPast(curDate) ||
-          bookedDates.some((date) => isSameDay(date, curDate))
-        }
-      />
+    <div className='flex flex-col justify-between min-w-0'>
+      <div className='overflow-x-auto'>
+        <DayPicker
+          className='pt-6 sm:pt-12 place-self-center max-w-full'
+          mode='range'
+          onSelect={(range) => setRange(range)}
+          selected={displayRange}
+          min={minBookingLength + 1}
+          max={maxBookingLength}
+          startMonth={new Date()}
+          startDate={new Date()}
+          endMonth={new Date(new Date().getFullYear() + 5, 11)}
+          captionLayout='dropdown'
+          numberOfMonths={twoMonths ? 2 : 1}
+          navLayout='after'
+          disabled={(curDate) =>
+            isPast(curDate) ||
+            bookedDates.some((date) => isSameDay(date, curDate))
+          }
+        />
+      </div>
 
-      <div className='flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]'>
-        <div className='flex items-baseline gap-6'>
+      <div className='flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between px-4 sm:px-8 bg-accent-500 text-primary-800 py-4 sm:h-[72px] sm:py-0'>
+        <div className='flex flex-wrap items-baseline gap-3 sm:gap-6'>
           <p className='flex gap-2 items-baseline'>
             {discount > 0 ? (
               <>

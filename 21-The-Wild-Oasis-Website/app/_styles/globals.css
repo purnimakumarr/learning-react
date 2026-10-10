@@ -41,4 +41,14 @@
   --rdp-day_button-height: 32px !important;
 
   margin: 0 !important;
+  max-width: 100%;
+}
+
+@media (max-width: 400px) {
+  .rdp-root {
+    --rdp-day-width: 30px !important;
+    --rdp-day-height: 30px !important;
+    --rdp-day_button-width: 30px !important;
+    --rdp-day_button-height: 30px !important;
+  }
 }

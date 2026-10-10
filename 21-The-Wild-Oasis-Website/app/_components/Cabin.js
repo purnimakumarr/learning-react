@@ -6,8 +6,8 @@ function Cabin({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image, description } =
     cabin;
   return (
-    <div className='grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24'>
-      <div className='relative scale-[1.15] -translate-x-3'>
+    <div className='grid grid-cols-1 lg:grid-cols-[3fr_4fr] gap-8 lg:gap-12 xl:gap-20 border border-primary-800 py-3 px-4 sm:px-6 xl:px-10 mb-12 lg:mb-24'>
+      <div className='relative h-64 sm:h-80 overflow-hidden lg:h-auto lg:overflow-visible xl:scale-[1.15] xl:-translate-x-3'>
         <Image
           src={image}
           alt={`Cabin ${name}`}
@@ -17,7 +17,7 @@ function Cabin({ cabin }) {
       </div>
 
       <div>
-        <h3 className='text-accent-100 font-black text-7xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]'>
+        <h3 className='text-accent-100 font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-5 xl:translate-x-[-254px] bg-primary-950 p-4 sm:p-6 pb-1 xl:w-[150%]'>
           Cabin {name}
         </h3>
 

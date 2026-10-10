@@ -16,7 +16,7 @@ function Filter() {
     router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   }
   return (
-    <div className='border border-primary-800 flex'>
+    <div className='border border-primary-800 flex flex-wrap w-full sm:w-auto'>
       <Button
         filter={'all'}
         activeFilter={activeFilter}
@@ -52,7 +52,7 @@ function Filter() {
 function Button({ filter, activeFilter, handleFilter, children }) {
   return (
     <button
-      className={`px-5 py-2 hover:bg-primary-700 ${activeFilter === filter ? 'bg-primary-700 text-primary-50' : ''}`}
+      className={`px-3 py-2 text-sm sm:px-5 sm:text-base grow sm:grow-0 basis-1/2 sm:basis-auto hover:bg-primary-700 ${activeFilter === filter ? 'bg-primary-700 text-primary-50' : ''}`}
       onClick={() => handleFilter(filter)}
     >
       {children}
